@@ -46,7 +46,6 @@ def apply_coupons(cart, coupons)
           :count => ticket[:num]
         }
         cart[counter][:count] = food[:count] - ticket[:num]
-        puts cart
       end
       counter += 1
     end
