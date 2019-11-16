@@ -80,7 +80,7 @@ def checkout(cart, coupons)
   puts coupons
   total = 0
   smol_cart = consolidate_cart(cart)
-  apl_cart = apply_coupons(smol_cart)
+  apl_cart = apply_coupons(smol_cart, coupons)
   final_cart = apply_clearance(apl_cart)
   final_cart.each do |food|
     total += food[:price] * food[:count]
