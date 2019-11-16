@@ -52,6 +52,7 @@ def apply_coupons(cart, coupons)
         else
           cart[counter][:count] = food[:count] - ticket[:num]
         end
+        counter += 1
       end
     end
   end
