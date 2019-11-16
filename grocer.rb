@@ -61,6 +61,7 @@ def apply_clearance(cart)
   cart.each do |food|
     if food[:clearance]
       cart[counter][:price] *= 0.8
+      cart[counter][:price].round(1)
     end
     counter += 1
   end
