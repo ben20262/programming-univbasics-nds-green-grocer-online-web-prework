@@ -35,8 +35,6 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  puts cart
-  puts coupons
   coupons.each do |ticket|
     counter = 0
     cart.each do |food|
@@ -48,11 +46,10 @@ def apply_coupons(cart, coupons)
           :count => ticket[:num]
         }
         cart[counter][:count] = food[:count] - ticket[:num]
-        counter += 1
       end
+      counter += 1
     end
   end
-  puts cart
   cart
 end
 
