@@ -62,6 +62,7 @@ def apply_clearance(cart)
     if food[:clearance]
       cart[counter][:price] *= 0.8
       cart[counter][:price].round(1)
+      puts cart[counter][:price]
     end
     counter += 1
   end
