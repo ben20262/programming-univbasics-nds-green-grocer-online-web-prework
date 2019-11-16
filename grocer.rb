@@ -47,11 +47,7 @@ def apply_coupons(cart, coupons)
           :clearance => food[:clearance],
           :count => ticket[:num]
         }
-        if food[:count] == ticket[:num]
-          cart.delete_at(counter)
-        else
-          cart[counter][:count] = food[:count] - ticket[:num]
-        end
+        cart[counter][:count] = food[:count] - ticket[:num]
         counter += 1
       end
     end
