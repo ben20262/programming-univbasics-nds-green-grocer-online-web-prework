@@ -42,8 +42,8 @@ def apply_coupons(cart, coupons)
     cart.each do |food|
       if food[:item] == ticket[:item] && food[:count] >= ticket[:num]
         cart << {
-          :item => (food[:item] + " W/COUPON"),
-          :price => (ticket[:price] / ticket[:num]),
+          :item => food[:item] + " W/COUPON",
+          :price => ticket[:cost] / ticket[:num],
           :clearance => food[:clearance],
           :count => ticket[:num]
         }
