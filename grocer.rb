@@ -35,8 +35,6 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  puts cart
-  puts coupons
   coupons.each do |ticket|
     counter = 0
     cart.each do |food|
@@ -56,7 +54,7 @@ def apply_coupons(cart, coupons)
       end
     end
   end
-  puts cart
+  cart
 end
 
 def apply_clearance(cart)
