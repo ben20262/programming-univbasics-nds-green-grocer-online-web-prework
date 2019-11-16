@@ -77,7 +77,6 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   puts cart
-  puts coupons
   total = 0
   smol_cart = consolidate_cart(cart)
   apl_cart = apply_coupons(smol_cart, coupons)
