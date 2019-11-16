@@ -35,6 +35,27 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  puts "Hi"
+  puts coupons
+  coupons.each do |ticket|
+    counter = 0
+    cart.each do |food|
+      if food[:item] == ticket[:item] && food[:count] >= ticket[:num]
+        cart << {
+          :item => food[:item] + " W/COUPON",
+          :price => ticket[:price] / ticket[:num],
+          :clearance => food[:clearance],
+          :count => ticket[:num]
+        }
+        if food[:count] == ticket[:num]
+          cart[counter].delete()
+        else
+          cart[counter][:count] = food[:count] - ticket[:num]
+        end
+      end
+    end
+  end
+  puts cart
 end
 
 def apply_clearance(cart)
